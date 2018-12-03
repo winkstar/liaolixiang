@@ -1,0 +1,55 @@
+.container{
+  height: 100vh;
+  padding: 10px;
+  box-sizing: border-box;
+  display: block;
+}
+
+.box{
+  display: flex;
+  width: 100%;
+  /* flex-direction: row; */
+  /* justify-content: center; */
+  height: 100px;
+  margin-top: 10px;
+}
+
+.left{
+  position: relative;
+  width: 20px;
+}
+
+.left text{
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  margin-top: -4px;
+}
+
+.right{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #fff;
+  margin-left: 10px;
+}
+
+.messTitle{
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.messCon{
+font-size: 13px;
+color: #a6a6a6;
+overflow : hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 3;
+-webkit-box-orient: vertical;
+}

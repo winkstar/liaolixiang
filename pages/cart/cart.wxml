@@ -1,0 +1,63 @@
+<!--购物车页面-->
+<view class='container'>
+  <view class='tips'>购买前请先确认烹饪食物的相关器具是否齐全！</view>
+  <scroll-view class='porduct-list' scroll-y style='height:{{scrollHeight}}px'>
+    <block wx:for="{{carts}}" wx:key="this" wx:for-index='index'>
+      <view style="{{item.txtStyle}}" class='porduct-item' bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}">
+        <view class='select'>
+          <icon wx:if="{{item.selected}}" type="success" data-index="{{index}}" color="black" catchtap="selectList" />
+          <icon wx:else type="circle" data-index="{{index}}" bindtap="selectList" />
+        </view>
+        <view class='porduct-image' data-id='{{item.productId}}' catchtap='checkProduct'>
+          <image src='{{ip}}{{item.url}}'></image>
+        </view>
+        <view class='description'>
+          <text>{{item.title}}</text>
+          <picker bindchange="bindPickerChange" data-index='{{index}}' value="{{item.typeIndex}}" range="{{array}}">
+            <view class="picker">
+              类型：{{array[item.typeIndex]}}
+            </view>
+          </picker>
+          <text class='dishInner' wx:if='{{item.typeIndex==0}}'>分量：{{item.numPeop1}}人食</text>
+          <text class='dishInner' wx:if='{{item.typeIndex==1}}'>分量：{{item.numPeop2}}人食</text>
+          <view class='price-count'>
+            <text class='color-red' wx:if='{{item.typeIndex==0}}'>￥{{item.price1/100}}</text>
+            <text class='color-red' wx:if='{{item.typeIndex==1}}'>￥{{item.price2/100}}</text>
+            <view class='count'>
+              <!-- 主容器 -->
+              <view class="stepper">
+                <!-- 减号 -->
+                <text class="{{minusStatus}}" bindtap="bindMinus" data-obj="{{obj}}" data-index="{{index}}">-</text>
+                <!-- 数值 -->
+                <input type="number" bindchange="bindManual" value="{{item.num}}" data-index="{{index}}" />
+                <!-- 加号 -->
+                <text class="normal" bindtap="bindPlus" data-index="{{index}}">+</text>
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view data-id="{{item.productId}}" data-index='{{index}}' style='{{item.delStyle}}' hidden='{{item.del}}' bindtap="delItem" class="del">删除</view>
+      </view>
+
+    </block>
+
+  </scroll-view>
+
+  <view class='operator'>
+    <view class='check-all'>
+
+      <icon wx:if="{{selectAllStatus}}" type="success" color="black" catchtap="selectAll" />
+      <icon wx:else type="circle" catchtap="selectAll" />
+      <text>全选</text>
+    </view>
+    <view class='total'>
+      <text>总共:</text>
+      <text class='color-red'>￥{{totalPrice}}</text>
+    </view>
+
+    <view class='opr-btn'>
+      <button catchtap='pay'>去结算</button>
+    </view>
+  </view>
+</view>

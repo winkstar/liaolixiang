@@ -1,0 +1,31 @@
+<view class='container'>
+  <view class='receiveMan'>
+    <text>收货人</text>
+    <input bindblur="bindMan" placeholder="姓名" value='{{receiveMan}}' />
+  </view>
+
+  <view class='phone'>
+    <text>联系方式</text>
+    <input type='number' bindblur="bindPhone" placeholder="手机号码" value='{{phone}}' />
+  </view>
+
+  <view class='province'>
+    <text>地址</text>
+    <picker bindchange="bindRegionChange" value="{{index}}" range="{{array}}">
+      <view>
+        {{'湖北省'}}  {{'武汉市'}} {{wen}} {{index?array[index]:''}}
+      </view>
+    </picker>
+  </view>
+
+  <view class='address'>
+    <text>门牌号</text>
+    <input type='text' bindblur="bindAddress" placeholder="某小区一单元1233" value='{{address}}' />
+  </view>
+
+
+</view>
+<!--确认  -->
+<view class='confirm'>
+  <button size="default" catchtap='addNew'>确认</button>
+</view>

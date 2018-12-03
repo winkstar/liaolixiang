@@ -1,0 +1,20 @@
+<!--pages/commentList/comment.wxml-->
+<view class='container'>
+  <view class='commentBox'>
+    <view class='tophandle'>
+      <text class='cancel' bindtap='cancel'>取消</text>
+      <text class='report' bindtap='report'>发表</text>
+    </view>
+    <view class='content'>
+      <textarea placeholder='写些什么……' auto-height='true' bindinput='inputText' value='{{commentText}}'></textarea>
+      <view class='contentHandle'>
+        <image class='addPic' src='../image/addComment.png' bindtap='addPic'></image>
+        <text class='addText'>新增图片</text>
+        <text class='commentTips'>晒图好评可获得5积分哦</text>
+      </view>
+    </view>
+    <view class='picBox'>
+      <image src='{{ip}}{{item}}' wx:for='{{picList}}' wx:key='*this'></image>
+    </view>
+  </view>
+</view>

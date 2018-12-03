@@ -1,0 +1,66 @@
+<view class='container'>
+  <!--头部部分  -->
+  <view class='addressBox'>
+    <view class='userBg' wx:if='{{!hasAddress}}'>
+      <view class='noAddress'>还没有默认收货地址，点击右侧添加默认收货地址吧</view>
+    </view>
+
+    <view class='namePhone' wx:if='{{hasAddress}}'>
+      <text class='name'>{{address.receiver}}</text>
+      <text class='phone'>{{address.phone}}</text>
+    </view>
+
+    <view class='address' wx:if='{{hasAddress}}'>
+      <text>{{address.address}}</text>
+    </view>
+
+    <view class='arrow' catchtap='address'> > </view>
+  </view>
+  <!--中间部分  -->
+  <view class='orderCon'>
+    <view class='orderSingle'>
+      <block wx:for='{{allOrder}}' wx:for-item="i" wx:key="this">
+        <view class='orderGoods'>
+          <view class='goodsImg'>
+            <image src='{{ip}}{{i.src}}'></image>
+          </view>
+
+          <view class='goodsDes'>
+            <view class='goodsTitle'>{{i.goodsTitle}}</view>
+            <view class='goodsNum'>
+              <text>× {{i.goodsNum}}</text>
+              <text class='price'>¥ {{i.price*i.goodsNum/100}}</text>
+              <!-- <text wx:if="{{item.state == '待收货'}}" class='tui'>退换/售后</text> -->
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class='money'>
+    <view class='sendMoney'>
+      <text class='textFrist'>运费 <text class='textRed'> (运费减免:满50减5,满60减6,满70包邮)</text></text>  
+      <text class='price'>¥ {{sendMoney/100}}</text>
+    </view>
+  </view>
+  <!-- 使用卡券 -->
+  <view class='card'>
+    <text>优惠券：</text>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio" wx:for="{{cards}}" wx:key='*this'>
+        <radio value="{{item.id}}" checked="{{item.checked}}" />{{item.title}}
+      </label>
+    </radio-group>
+  </view>
+  <view class='operator'>
+    <view class='total'>
+      <text>总共:</text>
+      <text class='color-red'>￥{{totalPrice/100}}</text>
+      <text class='realPrice'>{{realPrice}}</text>
+    </view>
+
+    <view class='opr-btn' catchtap='pay'>
+      去付款
+    </view>
+  </view>
+</view>

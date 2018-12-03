@@ -1,0 +1,80 @@
+/* pages/commentList/comment.wxss */
+.container{
+  background: #000;
+  height: 100%;
+}
+.commentBox{
+  width: 100%;
+  background: #fff;
+  margin-top: 50px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.commentBox .tophandle{
+  width: 100%;
+  display: flex;
+}
+.tophandle text{
+  flex: 50%;
+  line-height: 30px;
+}
+.tophandle .cancel{
+  color: #666;
+  text-align: left;
+}
+.tophandle .report{
+  color: red;
+  text-align: right;
+}
+.commentBox .content{
+  margin-top: 10px;
+}
+.content textarea{
+  font-size: 16px;
+  min-height: 100px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.content .contentHandle{
+  width: 100%;
+  display: flex;
+  margin-top: 15px;
+}
+.contentHandle image{
+  flex: 15%;
+  max-width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+.contentHandle .addText{
+  flex: 20%;
+  color: #333;
+  line-height: 26px;
+  margin-left: 10px;
+}
+.contentHandle .commentTips{
+  flex: 65%;
+  text-align: right;
+  font-size: 14px;
+  line-height: 26px;
+  color: #aaa;
+}
+.content .picBox{
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.picBox image{
+  flex: 30%;
+  max-width: 30%;
+  margin: 3px;
+  height: 120px;
+  display: inline-block;
+}

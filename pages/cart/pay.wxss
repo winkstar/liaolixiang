@@ -1,0 +1,264 @@
+.addressBox {
+  width: 100%;
+  height: 120px;
+  position: relative;
+  margin-bottom: 10px;
+  background-color:#fff;
+  border-radius:10px;
+}
+
+.addressBox .userBg {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.addressBox .userBg image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.namePhone {
+  position: absolute;
+  top: 20px;
+  left: 50rpx;
+  font-size: 16px;
+  color: #000;
+}
+
+.name {
+  margin-right: 20rpx;
+}
+
+.address {
+  position: absolute;
+  top: 60px;
+  left: 50rpx;
+  font-size: 12px;
+  color: #000;
+}
+.noAddress{
+  font-size: 12px;
+  line-height: 90px;
+}
+.address text {
+  display: block;
+  width: 80%;
+}
+
+.arrow {
+  position: absolute;
+  right: 36rpx;
+  top: 40px;
+  color: #000;
+  padding: 10px;
+}
+
+/*金额部分  */
+
+.money {
+  /* margin-top: 10px; */
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.money>view {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  line-height: 50px;
+  font-size: 14px;
+}
+.card{
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+.card text{
+  font-size: 14px;
+  display: block;
+  line-height: 20px;
+  text-indent: 10px;
+  margin-bottom: 10px;
+}
+.card .radio-group{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.radio-group .radio{
+  flex: 50%;
+  text-align: center;
+  font-size: 14px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.money>view.total {
+  height: 40px;
+  margin-top: 10px;
+  border-top: 1px solid #f5f5f5;
+}
+
+.btn {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/*订单  */
+
+.orderCon {
+  width: 100%;
+}
+
+.orderSingle {
+  font-size: 14px;
+  color: #505050;
+  background-color: #fff;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.orderState {
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.orderDetail {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.left {
+  height: 40px;
+  line-height: 44px;
+}
+
+.right {
+  width: 180rpx;
+  height: 30px;
+  margin-top: 5px;
+}
+
+.right button {
+  height: 30px;
+  background-color: #fff;
+  color: #000;
+  /* font-weight: 700; */
+  line-height: 30px;
+  font-size: 12px;
+  padding: 0 20rpx;
+  border: 1px solid #000;
+}
+
+.orderGoods {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.orderGoods .goodsImg {
+  width: 80px;
+  height: 80px;
+}
+
+.orderGoods .goodsImg image {
+  width: 80px;
+  height: 80px;
+}
+
+.goodsDes {
+  width: 100%;
+  margin-left: 20rpx;
+}
+
+.goodsNum {
+  width: 100%;
+  margin-top: 30px;
+  color: #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container{
+  /* height: 100vh; */
+  padding: 10px;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  display: block;
+}
+
+.operator {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0  0 0 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.opr-btn{
+ display: flex;
+  line-height: 40px;
+  align-items: center;
+  background-color: #383838;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.total {
+  display: flex;
+  line-height: 40px;
+  align-items: center;
+}
+.total text{
+  margin: 0 5px;
+}
+.realPrice{
+  color: red;
+  font-size: 12px;
+  text-decoration: line-through;
+}
+.sale{
+  color: red;
+  font-size: 12px;
+}
+.textRed{
+  color: red;
+  font-size: 10px;
+}

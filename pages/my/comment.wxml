@@ -1,0 +1,34 @@
+<view class="container">
+  <!--全部订单  -->
+  <view class='orderCon'>
+
+    <block wx:for="{{content}}" wx:for-index="index" wx:key="this">
+      <view class='orderSingle'>
+        <!-- 信息 -->
+        <view class='orderState'>
+          <view class='orderNum'>
+            <image src='{{userPic}}'></image>
+            <text class='name'>{{item.name}}</text>
+          </view>
+          <view>
+            <text class='state'>{{item.time}}</text>
+          </view>
+        </view>
+        <!-- 评论内容 -->
+        <view class='content'>
+          <view class='productPic'>
+            <image mode='aspectFill' src='{{ip}}{{i}}' wx:for='{{item.imgs}}' wx:for-item="i" wx:key="this"></image>
+          </view>
+          <text>{{item.con}}</text>
+        </view>
+        <!-- 商品信息 -->
+        <view class='orderGoods'>
+          <view class='goodsDes'>
+            <view class='goodsTitle' data-id='{{item.productId}}' bindtap='checkIt'>评论了菜：{{item.goodsTitle}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+
+  </view>
+</view>

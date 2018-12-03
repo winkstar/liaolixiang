@@ -1,0 +1,81 @@
+<view class='container' style='height:{{num}}'>
+  <view class='myBox'>
+    <image src='{{src}}' mode='aspectFit'></image>
+    <text class='name'>{{userName}}</text>
+    <view class='item'>
+      <!-- 我的订单 -->
+      <view class='order' catchtap='order'>
+        <view class='icon-1'>
+          <!-- <text class='cart-bage' hidden='{{cartNum == 0?true : false}}'>1</text> -->
+        </view>
+        <text>我的订单</text>
+      </view>
+
+      <view class='collect' catchtap='collect'>
+        <view class='icon-2'>
+          <!-- <text class='cart-bage' hidden='{{cartNum == 0?true : false}}'>1</text> -->
+        </view>
+        <text>我的收藏</text>
+      </view>
+
+      <view class='transmit' catchtap='transmit'>
+        <view class='icon-3'>
+          <!-- <text class='cart-bage' hidden='{{cartNum == 0?true : false}}'>1</text> -->
+        </view>
+        <text>我的转发</text>
+      </view>
+
+      <view class='comment' catchtap='comment'>
+        <view class='icon-4'>
+          <!-- <text class='cart-bage' hidden='{{cartNum == 0?true : false}}'>1</text> -->
+        </view>
+        <text>我的评论</text>
+      </view>
+
+      <view class='message' catchtap='message'>
+        <view class='icon-5'>
+          <!-- <text class='cart-bage' hidden='{{cartNum == 0?true : false}}'>1</text> -->
+        </view>
+        <text>我的消息</text>
+      </view>
+
+      <view class='address' catchtap='address'>
+        <view class='icon-6'>
+          <!-- <text class='cart-bage' hidden='{{cartNum == 0?true : false}}'>1</text> -->
+        </view>
+        <text>收货地址</text>
+      </view>
+
+      <view class='jifen' catchtap='jifen'>
+        <image class='icon' src='../image/jifen.svg'></image>
+        <text>我的积分</text>
+      </view>
+
+      <view class='kaquan' catchtap='kaquan'>
+        <image class='icon' src='../image/kaquan.svg'></image>
+        <text>我的卡券</text>
+      </view>
+
+      <view class='kefu' catchtap='kefu'>
+        <view class='icon-7'>
+          <!-- <text class='cart-bage' hidden='{{cartNum == 0?true : false}}'>1</text> -->
+        </view>
+        <text>客服中心</text>
+        <button open-type='contact'>kefu</button>
+      </view>
+
+      <view class='gift' catchtap='gift'>
+        <image class='icon' src='../image/gift.png'></image>
+        <text>拼团得券</text>
+      </view>
+    </view>
+    <!-- 弹出层 -->
+    <!-- <view class='shareBox' style='{{showWindow?"bottom:0":"bottom:-40%"}}'> 
+      <view class='colseWindow' catchtap='colseWindow'>关闭</view>
+      <view class='shareText'>
+        发起拼团分享给好友即可获得10元加5元优惠券哦，现在就发起拼团？
+      </view>
+      <button open-type='share' bindtap='pintuan'>发起拼团</button>
+    </view> -->
+  </view>
+</view>

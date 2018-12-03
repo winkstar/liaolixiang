@@ -1,0 +1,39 @@
+<view class='container'>
+  <view class='imgBox'>
+    <image src='{{ip}}{{product.img}}'></image>
+    <text class='name'>//{{product.name}} //</text>
+  </view>
+
+  <view class='cook'>
+    <!-- 食材 -->
+    <view class='food'>
+      <view class='title'>
+        <view class='circle'>
+          <view class='little'></view>
+        </view>
+
+        <view>食材明细</view>
+      </view>
+
+      <view class='con'>
+        <text>主料: <text wx:for='{{product.zMaterias}}' wx:key='{{item.id}}'>{{item.materia.name}}{{item.amount}}{{item.unit}}、</text></text>
+        <text>辅料: <text wx:for='{{product.fMaterias}}' wx:key='{{item.id}}'>{{item.materia.name}}{{item.amount}}{{item.unit}}、</text></text>
+        <text>配料: <text wx:for='{{product.pMaterias}}' wx:key='{{item.id}}'>{{item.materia.name}}{{item.amount}}{{item.unit}}、</text></text>
+      </view>
+    </view>
+    <!-- 步骤 -->
+    <view class='step'>
+      <view class='title'>
+        <view class='circle'>
+          <view class='little'></view>
+        </view>
+
+        <view>制作步骤</view>
+      </view>
+      <view class='con'>
+        <import src="../../wxParse/wxParse.wxml" />
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+      </view>
+    </view>
+  </view>
+</view>

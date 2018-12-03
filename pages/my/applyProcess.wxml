@@ -1,0 +1,35 @@
+<view class='container'>
+
+  <view class='top'>
+    <view style='display:flex;flex-direction: column;margin-bottom:10px;border-bottom:1px solid #f5f5f5;'>
+      <text class='sendNum'>运单号: 123654894444</text>
+      <text class='detail'> 共 2 件商品 | 待出货</text>
+    </view>
+
+    <view class='goodsImg'>
+      <block wx:for="{{img}}" wx:key="this" wx:for-index="index">
+        <image src='{{item.src}}'></image>
+      </block>
+    </view>
+  </view>
+
+  <view class='info'>
+
+    <view class='logInfo'>
+
+      <block wx:for="{{info}}" wx:key="this" wx:for-index="index">
+        <view>
+          <icon wx:if="{{index== 0}}" type='success' size='12' color='black'></icon>
+          <icon wx:else type='success_circle' size='12' color='black'></icon>
+          <view class='br'></view>
+          <view>
+            <text class='singleInfo'>{{item.singleInfo}}</text>
+            <text class='time'>{{item.time}}</text>
+          </view>
+        </view>
+      </block>
+
+    </view>
+  </view>
+
+</view>

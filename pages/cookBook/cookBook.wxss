@@ -1,0 +1,95 @@
+.container{
+  padding: 10px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: block;
+}
+
+.imgBox{
+  width: 100%;
+  height: 100px;
+  position: relative;
+}
+
+.imgBox image{
+  width: 100%;
+  height: 100px;
+}
+
+.name{
+  position: absolute;
+  /* width: 150px; */
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  margin-top: -12px;
+  color: #fff;
+  font-weight: 700;
+}
+/* 食材 */
+.cook{
+  margin-top: 20px;
+}
+
+.title{
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  line-height: 20px;
+  flex-wrap: wrap;
+  background: #eee;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.circle{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #808080;
+  position: relative;
+  margin-left:  20px;
+  margin-right: 10px;
+}
+
+.little{
+  flex: 10%;
+  max-width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.con{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.title .step{
+  flex: 100%;
+}
+.con>text{
+  margin-left: 20px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #505050;
+}
+.step{
+  margin-top: 20px;
+}
+.con view{
+  margin-left: 20px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #505050;
+  letter-spacing:1px
+}
+
+.num{
+  margin-right: 5px;
+  color: red;
+}

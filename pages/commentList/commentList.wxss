@@ -1,0 +1,126 @@
+/* pages/commentList/commentList.wxss */
+page{
+  height: 100%;
+}
+.commentlist{
+  width: 100%;
+  height: 100%;
+  color: #666;
+  background: #eee;
+  position: relative;
+}
+.listcontent{
+  padding:30px 10px 10px;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
+.listcontent .commentHead{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 30px;
+  border-bottom: 1px solid #ccc;
+  z-index: 9;
+  background: #fff;
+}
+.listcontent .commentitem{
+  width: 100%;
+  display: flex;
+  margin: 10px 0;
+}
+.commentitem .commentuserpic{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.commentitem .commentcontent{
+  flex: 80%;
+  display: flex;
+  color: #666;
+  flex-wrap: wrap;
+  padding: 5px 0 5px;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.commentcontent .commentname{
+  flex: 30%;
+  text-align: left;
+  padding-left: 20rpx;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}
+.commentcontent .commenttime{
+  flex: 30%;
+  text-align: right;
+  font-size: 12px;
+  line-height: 20px;
+}
+.commentcontent .commenttext{
+  flex: 100%;
+  font-size: 14px;
+  padding-left: 20rpx;
+  margin-top: 10px;
+  white-space:pre-line;
+  line-height: 18px;
+}
+.commentcontent .commentPic{
+  flex: 100%;
+  width: 100%;
+}
+.commentPic image{
+  width: 90px;
+  height: 90px;
+  margin: 2px;
+}
+.commentlist .commentbottom{
+  position: fixed;
+  background: #fff;
+  height: 50px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.commentbottom .userImg{
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  left: 10px;
+  top: 10px;
+  border-radius: 50%;
+}
+
+.commentbottom input{
+  flex: 85%;
+  width: 100%;
+  height: 100%;
+  padding-left: 40px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+.commentbottom .addComment{
+  flex: 15%;
+  max-width: 22px;
+  height: 22px;
+  margin-top: 4px;
+}
+
+.commentbottom text{
+  flex: 15%;
+  font-size: 14px;
+  line-height: 30px;
+  color: red;
+  text-align: center;
+}

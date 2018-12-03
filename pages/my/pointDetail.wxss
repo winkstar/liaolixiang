@@ -1,0 +1,43 @@
+/* pages/my/pointDetail.wxss */
+page{
+  height: 100%;
+  width: 100%;
+}
+.container{
+  width: 100%;
+  height: 100%;
+}
+.listBox{
+  width: 95%;
+  min-height: 95%;
+  margin: 4% auto;
+  background: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.listBox .listItem{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+}
+.listItem .pointTitle{
+  flex: 60%;
+  font-size: 14px;
+  line-height: 26px;
+}
+.listItem .pointDetail{
+  flex: 40%;
+  font-size: 16px;
+  line-height: 26px;
+  color: rgba(212, 48, 48, 1);
+  text-align: right;
+}
+.listItem .pointTime{
+  flex: 100%;
+  font-size: 12px;
+  line-height: 25px;
+}

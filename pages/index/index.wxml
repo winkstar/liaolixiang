@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="container">
+  <video id='videoCont' autoplay='autoplay' src='{{ip}}{{chooseProduct.video}}' show-play-btn='{{true}}' show-center-play-btn='{{true}}' controls='controls'></video>
+  <cover-view class='collect' data-id='{{chooseProduct.id}}' catchtap='likeIt'>
+    <cover-image src='{{likedIcon}}' class='icon'></cover-image>
+    <cover-view class='num'>收藏</cover-view>
+  </cover-view>
+  <cover-view class='comment' catchtap='comment'>
+    <cover-image src='../image/comment.png' class='icon'></cover-image>
+    <!-- <cover-view class='num'>{{chooseProduct.comments?chooseProduct.comments:0}}</cover-view> -->
+    <cover-view class='num'>评论</cover-view>
+  </cover-view>
+  <cover-view class='transmit' catchtap='transmit'>
+    <cover-image class='icon' src='../image/shareIndex.png'></cover-image>
+    <!-- <cover-view class='num'>{{chooseProduct.shares?chooseProduct.shares:0}}</cover-view> -->
+    <cover-view class='num'>分享</cover-view>
+  </cover-view>
+  <!-- 切换按钮 -->
+  <cover-view class='change' bindtap='changVideo'>
+    <!-- <cover-image src='../image/next.png' class='icon'></cover-image> -->
+    <cover-view class='text'>下一个</cover-view>
+    <!-- <cover-view class='bage'>1</cover-view> -->
+  </cover-view>
+  <cover-view class='name'>
+    <cover-view>#{{chooseProduct.name}}#</cover-view>
+  </cover-view>
+  <cover-view class='cart' bindtap='cart' data-productid='{{chooseProduct.id}}'>
+    <cover-image src='../image/car.png' class='icon'>
+    </cover-image>
+    <cover-view class='bage'>{{carNumber}}</cover-view>
+  </cover-view>
+  <cover-view class='cookBook' data-id='{{chooseProduct.id}}' bindtap='cookBook'>
+    <cover-image src='../image/diss.png' class='icon'></cover-image>
+  </cover-view>
+  <cover-view class='stepBox' wx:if='{{isFirst}}'>
+    <cover-image catchtap='click1' class='step1' src='../image/step1.png' wx:if='{{flag1}}'></cover-image>
+    <cover-image catchtap='click2' class='step2' src='../image/step2.png' wx:if='{{flag2}}'></cover-image>
+    <cover-image catchtap='click3' class='step3' src='../image/step3.png' wx:if='{{flag3}}'></cover-image>
+  </cover-view>
+</view>

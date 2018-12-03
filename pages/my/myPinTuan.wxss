@@ -1,0 +1,53 @@
+/* pages/my/myPinTuan.wxss */
+.container{
+  background: #fff;
+  padding-bottom: 20px;
+}
+.title{
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+}
+.activedBox{
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.activedBox .activedItem{
+  margin: 10px 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 2px 2px #eee;
+  font-size: 12px;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.activedItem .name{
+  flex: 40%;
+  line-height: 26px;
+  text-align: center;
+}
+.activedItem .people{
+  flex: 30%;
+  text-align: center;
+  line-height: 26px;
+}
+.activedItem button{
+  flex: 30%;
+  font-size: 12px;
+  padding: 0;
+  line-height: 26px;
+}
+.tips{
+  padding: 10px 10px 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 30px;
+}
+.new{
+  font-size: 16px;
+  line-height: 30px;
+}

@@ -1,0 +1,74 @@
+{
+  "pages":[
+    "pages/welcome/welcome",
+    "pages/index/index",
+    "pages/category/category",
+    "pages/cart/cart",
+    "pages/my/my",
+    "pages/cookBook/cookBook",
+    "pages/my/order",
+    "pages/my/logistic",
+    "pages/my/apply",
+    "pages/my/applyProcess",
+    "pages/my/collect",
+    "pages/my/transmit",
+    "pages/my/comment",
+    "pages/my/message",
+    "pages/my/messDetail",
+    "pages/my/address",
+    "pages/my/newAddress",
+    "pages/my/wuliu",
+    "pages/my/point",
+    "pages/my/card",
+    "pages/my/pointDetail",
+    "pages/category/search",
+    "pages/category/reduce",
+    "pages/category/body",
+    "pages/category/tea",
+    "pages/cart/pay",
+    "pages/map/map",
+    "pages/commentList/commentList",
+    "pages/share/share",
+    "pages/commentList/comment",
+    "pages/search/searchList",
+    "pages/my/myPinTuan"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "料理享",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#fff",
+    "backgroundColor": "#000", 
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "pages/image/home-gray.png",
+        "iconPath": "pages/image/home.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "pages/image/category-gray.png",
+        "iconPath": "pages/image/category.png",
+        "pagePath": "pages/category/category",
+        "text": "分类"
+      },
+      {
+        "selectedIconPath": "pages/image/cart-gray.png",
+        "iconPath": "pages/image/cart.png",
+        "pagePath": "pages/cart/cart",
+        "text": "购物车"
+      },
+      {
+        "selectedIconPath": "pages/image/my-gray.png",
+        "iconPath": "pages/image/my.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  }
+}

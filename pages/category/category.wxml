@@ -1,0 +1,33 @@
+<view class='container'>
+  <!--搜索框  -->
+  <view class='search-container'>
+    <view class='searchBox'>
+      <input name='search-input' class='search-input' placeholder='寻找我的料理' value="{{inputValue}}" bindinput="bindKeyInput" bindconfirm="searchBtn" confirm-type='搜索'></input>
+      <image src='../image/search.png'></image>
+      <icon type='clear' hidden='{{flag}}' catchtap='shanchu'></icon>
+    </view>
+  </view>
+
+  <!--热门搜索  -->
+  <view class='search-history'>
+    <view class='history-title'>
+      <view class='title'>热门搜索</view>
+      <view class='clear' catchtap='clear' hidden='{{qc}}'>清空</view>
+    </view>
+
+    <view class="history-content">
+      <block wx:for="{{content}}" wx:key="this">
+        <view class="conItem" data-key='{{item.con}}' bindtap='searchHot'>{{item.con}}</view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 热门分类 -->
+  <view class='search-category'>
+    <view class='category-title'>热门分类</view>
+    <view class='category-image' wx:for='{{categoryList}}' wx:key='{{item.id}}' data-type='{{item.title}}' data-id='{{item.value}}' catchtap='chooseType'>
+      <image src='{{ip}}{{item.img}}'></image>
+      <text>//  {{item.title}}   //</text>
+    </view>
+  </view>
+</view>

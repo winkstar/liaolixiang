@@ -1,0 +1,242 @@
+<view class='container'>
+  <!-- <view class='search-content'>
+    <image src='../image/search.png'></image>
+    <input type='text' placeholder='查询订单' catchtap='search'></input>
+  </view> -->
+
+  <!-- <view class='orderTitle'>
+    <view catchtap='now1' class='tabItem {{current == "spjs"?"tabClass":""}}' data-opt="spjs">全部订单</view>
+    <view catchtap='now2' class='tabItem {{current == "ggcs"?"tabClass":""}}' data-opt="ggcs">待收货</view>
+    <view catchtap='now3' class='tabItem {{current == "shbz"?"tabClass":""}}' data-opt="shbz">已收货</view>
+    <view catchtap='now4' class='tabItem {{current == "pjdd"?"tabClass":""}}' data-opt="pjdd">售后</view>
+  </view> -->
+  <!--全部订单  -->
+  <view class='orderCon {{select1?"show":"hidden"}}'>
+
+    <block wx:for="{{allOrder}}" wx:for-index="index" wx:key="this">
+      <view class='orderSingle'>
+        <view class='orderState'>
+          <view class='orderNum'>订单号 : {{item.orderNum}}</view>
+          <view>
+            <text class='state'>{{item.state}}</text>
+          </view>
+        </view>
+
+        <block wx:for='{{item.content}}' wx:for-item="i" wx:key="this">
+          <view class='orderGoods'>
+            <view class='goodsImg'>
+              <image src='{{ip}}{{i.src}}' data-productid='{{i.productId}}' bindtap='checkProduct'></image>
+            </view>
+
+            <view class='goodsDes'>
+              <view class='comment' bindtap='commentProduct' data-productid='{{i.productId}}'>评价</view>
+              <view class='goodsTitle'>{{i.goodsTitle}}</view>
+              <view class='goodsNum'>
+                <text>× {{i.goodsNum}}</text>
+                <text class='price'>¥ {{i.price/100}}</text>
+                <!-- <text wx:if="{{item.state == '待收货'}}" class='tui'>退换/售后</text> -->
+              </view>
+            </view>
+          </view>
+        </block>
+
+        <view class='send'>
+          <text class='yf'>运费</text>
+          <view class='cost'>
+            <text style='opacity:0;'>1</text>
+            <text>¥ 10</text>
+          </view>
+        </view>
+
+        <view class='total'>
+          实付金额：
+          <text class='totalCost'>{{item.total/100}}</text>
+        </view>
+
+        <view class='orderDetail'>
+          <view class='left'>
+              {{item.time}}
+          </view>
+          <view class='right' catchtap='wuliu' data-number='{{item.expressNo}}'>查看物流</view>
+          <text class='approve' data-id='{{item.code}}' data-title='{{item.title}}' bindtap='tuikuan'>申请退款</text>
+        </view>
+
+        <view class='approveBox' wx:if='{{showApproveBox}}'>
+          <text class='approveTitle'>申请退款</text>
+          <text class='closeBox' bindtap='closeBox'>关闭</text>
+          <textarea placeholder='填写退款理由' value='{{detail}}' bindinput='textDetail'></textarea>
+          <button bindtap='tijiao'>确认提交</button>
+        </view>
+      </view>
+    </block>
+
+  </view>
+  <!--待收货订单  -->
+  <!-- <view class='orderCon {{select2?"show":"hidden"}}'>
+
+    <block wx:for="{{payOrder}}" wx:for-index="index" wx:key="this">
+      <view class='orderSingle'>
+        <view class='orderState'>
+          <view class='orderNum'>订单号 : {{item.orderNum}}</view>
+          <view>
+            <text class='state'>{{item.state}}</text>
+          </view>
+        </view>
+
+        <block wx:for='{{item.content}}' wx:for-item="i" wx:key="this">
+          <view class='orderGoods'>
+            <view class='goodsImg'>
+              <image src='{{i.src}}'></image>
+            </view>
+
+            <view class='goodsDes'>
+              <view class='goodsTitle'>{{i.goodsTitle}}</view>
+              <view class='goodsNum'>
+                <text>× {{i.goodsNum}}</text>
+                <text class='price'>¥ {{i.price}}</text>
+                
+              </view>
+            </view>
+          </view>
+        </block>
+
+        <view class='send'>
+          <text class='yf'>运费</text>
+          <view class='cost'>
+            <text style='opacity:0;'>1</text>
+            <text>¥ {{item.cost}}</text>
+          </view>
+        </view>
+
+        <view class='total'>
+          实付金额：
+          <text class='totalCost'>{{item.total}}</text>
+        </view>
+
+        <view class='orderDetail'>
+          <view class='left'>
+              {{item.time}}
+          </view>
+          <view class='right'>
+            <button wx:if="{{item.state == '配送中'}}" catchtap='pay'>查看物流</button>
+            <button wx:elif="{{item.state == '已收货'}}" catchtap='check'>申请售后</button>
+            <button wx:else="{{item.state == '待评价'}}" catchtap='judge'>立即评价</button>
+          </view>
+        </view>
+      </view>
+    </block>
+
+  </view> -->
+  <!--已收货订单  -->
+  <!-- <view class='orderCon {{select3?"show":"hidden"}}'>
+
+    <block wx:for="{{receiveOrder}}" wx:for-index="index" wx:key="this">
+      <view class='orderSingle'>
+        <view class='orderState'>
+          <view class='orderNum'>订单号 : {{item.orderNum}}</view>
+          <view>
+            <text class='state'>{{item.state}}</text>
+          </view>
+        </view>
+
+        <block wx:for='{{item.content}}' wx:for-item="i" wx:key="this">
+          <view class='orderGoods'>
+            <view class='goodsImg'>
+              <image src='{{i.src}}'></image>
+            </view>
+
+            <view class='goodsDes'>
+              <view class='goodsTitle'>{{i.goodsTitle}}</view>
+              <view class='goodsNum'>
+                <text>× {{i.goodsNum}}</text>
+                <text class='price'>¥ {{i.price}}</text>
+                
+              </view>
+            </view>
+          </view>
+        </block>
+
+        <view class='send'>
+          <text class='yf'>运费</text>
+          <view class='cost'>
+            <text style='opacity:0;'>1</text>
+            <text>¥ {{item.cost}}</text>
+          </view>
+        </view>
+
+        <view class='total'>
+          实付金额：
+          <text class='totalCost'>{{item.total}}</text>
+        </view>
+
+        <view class='orderDetail'>
+          <view class='left'>
+              {{item.time}}
+          </view>
+          <view class='right'>
+            <button wx:if="{{item.state == '配送中'}}" catchtap='pay'>查看物流</button>
+            <button wx:elif="{{item.state == '已收货'}}" catchtap='check'>申请售后</button>
+            <button wx:else="{{item.state == '待评价'}}" catchtap='judge'>立即评价</button>
+          </view>
+        </view>
+      </view>
+    </block>
+
+  </view> -->
+  <!--售后订单  -->
+  <!-- <view class='orderCon {{select4?"show":"hidden"}}'>
+
+    <block wx:for="{{judgeOrder}}" wx:for-index="index" wx:key="this">
+      <view class='orderSingle'>
+        <view class='orderState'>
+          <view class='orderNum'>订单号 : {{item.orderNum}}</view>
+          <view>
+            <text class='state'>{{item.state}}</text>
+          </view>
+        </view>
+
+        <block wx:for='{{item.content}}' wx:for-item="i" wx:key="this">
+          <view class='orderGoods'>
+            <view class='goodsImg'>
+              <image src='{{i.src}}'></image>
+            </view>
+
+            <view class='goodsDes'>
+              <view class='goodsTitle'>{{i.goodsTitle}}</view>
+              <view class='goodsNum'>
+                <text>× {{i.goodsNum}}</text>
+                <text class='price'>¥ {{i.price}}</text>
+              
+              </view>
+            </view>
+          </view>
+        </block>
+
+        <view class='send'>
+          <text class='yf'>运费</text>
+          <view class='cost'>
+            <text style='opacity:0;'>1</text>
+            <text>¥ {{item.cost}}</text>
+          </view>
+        </view>
+
+        <view class='total'>
+          实付金额：
+          <text class='totalCost'>{{item.total}}</text>
+        </view>
+
+        <view class='orderDetail'>
+          <view class='left'>
+              {{item.time}}
+          </view>
+          <view class='right'>
+            <button wx:if="{{item.state == '配送中'}}" catchtap='pay'>查看物流</button>
+            <button wx:elif="{{item.state == '已收货'}}" catchtap='process'>已退款</button>
+            <button wx:else="{{item.state == '待评价'}}" catchtap='judge'>立即评价</button>
+          </view>
+        </view>
+      </view>
+    </block>
+
+  </view> -->
+</view>

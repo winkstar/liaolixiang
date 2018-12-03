@@ -1,0 +1,8 @@
+<!--pages/welcome/welcome.wxml-->
+  <!-- <button open-type='getUserInfo' bindgetuserinfo='getUser'>授权登录</button> -->
+  <view class='container'>
+    <image class='back' src='../image/welcomeBack.jpg'></image>
+    <image class='topBack' src='../image/welcome2.png'></image>
+    <image class='btn' src='../image/welcome1.png'></image>
+    <button open-type='getUserInfo' bindgetuserinfo='getUser'></button>
+  </view>

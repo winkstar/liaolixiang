@@ -1,0 +1,10 @@
+<!--pages/my/pointDetail.wxml-->
+<view class='container'>
+  <view class='listBox'>
+    <view class='listItem' wx:for='{{pointList}}' wx:key='*this'>
+      <text class='pointTitle'>{{item.title}}</text>
+      <text class='pointDetail'>{{item.detail}}</text>
+      <text class='pointTime'>{{item.time}}</text>
+    </view>
+  </view>
+</view>

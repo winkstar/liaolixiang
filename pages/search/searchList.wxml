@@ -1,0 +1,11 @@
+<!--pages/search/searchList.wxml-->
+<view class='container'>
+  <view class='topHead'>关键词：{{key}}</view>
+  <view class='resultList'>
+    <view class='listItem' wx:for='{{list}}' wx:key='{{item.id}}'>
+      <image src='{{ip}}{{item.img}}' data-id='{{item.id}}' catchtap='checkDetail'></image>
+      <text>{{item.name}}</text>
+    </view>
+    <view class='nomore'>---没有更多结果了---</view>
+  </view>
+</view>

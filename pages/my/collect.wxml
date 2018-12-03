@@ -1,0 +1,26 @@
+<view class="container">
+  <!--搜索框  -->
+  <!-- <view class='search-container'>
+    <input class='search-input' placeholder='寻找我的料理' value="{{inputValue}}" bindinput="bindKeyInput"></input>
+    <image src='../image/search.png'></image>
+    <icon type='clear' hidden='{{flag}}' catchtap='shanchu'></icon>
+  </view> -->
+  <view class='manage' bindtap='manage'>{{manageText}}</view>
+  <!-- 收藏内容展示 -->
+  <view class='content'>
+    <block wx:for="{{content}}" wx:key="this" wx:for-index='index'>
+      <view class='box' data-id='{{item.id}}' catchtap='checkProduct'>
+        <image src='../image/del.png' class='delLiked' data-id='{{item.id}}' catchtap='delProduct' wx:if='{{isDone}}'></image>
+        <view class='tp'>
+          <image mode='aspectFill' src='{{ip}}{{item.src}}'></image>
+        </view>
+
+        <view class='detail'>
+          <text class='name'>{{item.name}}</text>
+          <!-- <text class='num'>{{item.num}}</text> -->
+          <!-- <text class='icon-1 icon'></text> -->
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

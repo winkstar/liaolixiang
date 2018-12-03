@@ -1,0 +1,257 @@
+.contanier{
+  background-color: #f5f5f5;
+}
+.search-content{
+  height:60px;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  background: #f5f5f5;
+}
+.search-content image{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top:15px;
+  left:20px;
+  z-index: 100
+}
+.search-content input{
+  height:40px;
+  line-height: 40px;
+  border: 1px solid #fff;
+  font-size: 14px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding-left: 50px;
+  background: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+/*tab  */
+.orderTitle{
+  width: 100%;
+  /* height: 40px; */
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+.tabItem {
+  width: 33.3%;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  font-size: 13px;
+}
+
+.tabClass {
+  border-bottom: 1px solid black;
+  color: #000;
+  font-weight: 700;
+}
+
+.show{
+  display: block;
+}
+
+.hidden{
+  display: none;
+}
+
+/*订单  */
+.orderCon{
+  width: 100%;
+}
+.orderSingle {
+  font-size: 14px;
+  color: #505050;
+  background-color: #fff;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.orderState{
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+
+
+.orderDetail{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f5f5f5;
+  position: relative;
+}
+.approve{
+  position: absolute;
+  height: 34px;
+  line-height: 34px;
+  top: 14px;
+  right: 110px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.approveBox{
+  position: fixed;
+  background: #fff;
+  width: 300px;
+  left: 50%;
+  top: 150px;
+  margin-left: -150px;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 0 2px 2px #ccc;
+  border-radius: 5px;
+}
+
+.approveBox .approveTitle{
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.approveBox textarea{
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+.approveBox button{
+  width: 30%;
+  font-size: 14px;
+}
+.approveBox .closeBox{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 14px;
+  z-index: 9;
+  line-height: 30px;
+}
+.left{
+  height: 40px;
+  line-height: 44px;
+}
+
+.right{
+  width: 180rpx;
+  height: 30px;
+  margin-top: 5px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  line-height: 30px;
+}
+
+.right button{
+  height: 30px;
+  background-color: #fff;
+  color: #000;
+  /* font-weight: 700; */
+  line-height: 30px;
+  font-size: 12px;
+  padding: 0 20rpx;
+  border: 1px solid #000;
+}
+
+.orderGoods {
+   width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.orderGoods .goodsImg{
+  width: 80px;  
+  height: 80px;
+}
+
+.orderGoods .goodsImg image{
+  width: 80px;  
+  height: 80px;
+}
+
+.goodsDes{
+  width: 100%;
+  margin-left: 20rpx;
+  position: relative;
+}
+
+.goodsDes .comment{
+  position: absolute;
+  top: -2px;
+  right: 0;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  line-height: 20px;
+  padding: 0 10px;
+}
+
+.goodsNum{
+  width: 100%;
+  margin-top: 30px;
+  color: #A6A6A6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tui{
+  background-color: #e5e5e5;
+  padding: 0 5px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.price{
+  color: black;
+}
+
+.send{
+  display: flex;
+  padding: 0 10px 10px 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.send .yf{
+  width: 100px;
+}
+
+.cost{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20rpx;
+  padding-right: 2%;
+  color: black;
+}
+
+.total{
+  width: 100%;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  text-align: right;
+  color: black;
+}

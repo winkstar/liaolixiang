@@ -1,0 +1,16 @@
+<!--pages/my/myPinTuan.wxml-->
+<view class='container'>
+  <text class='title'>已发起的拼团</text>
+  <view class='activedBox'>
+    <view class='activedItem' wx:for='{{activedList}}' wx:key='*this'>
+      <view class='name'>发起日期:{{item.createTime}}</view>
+      <view class='people'>参与人数:{{item.cnt}}/{{item.size}}</view>
+      <button disabled='{{item.cnt>=item.size}}' data-code='{{item.code}}' open-type='share' bindtap='oldPintuan'>发给好友拼团</button>
+    </view>
+    <view class='activedItem' wx:if='{{activedList.length===0}}'>
+      你还没有发起过拼团
+    </view>
+  </view>
+  <view class='tips'>发起拼团分享给好友即可获得10元加5元优惠券哦，现在就发起拼团？</view>
+  <button class='new' open-type='share' bindtap='newPintuan'>发起新拼团</button>
+</view>

@@ -1,0 +1,24 @@
+<view class="container">
+  <!--搜索框  -->
+  <!-- <view class='search-container'>
+    <input class='search-input' placeholder='甜点'  value="{{inputValue}}" bindinput="bindKeyInput"></input>
+    <image src='../image/search.png'></image>
+    <icon type='clear' hidden='{{flag}}' catchtap='shanchu'></icon>
+  </view> -->
+
+  <!-- 收藏内容展示 -->
+  <view class='content'>
+    <block wx:for="{{productList}}" wx:key="{{item.id}}" wx:for-index='index'>
+      <view class='box'>
+        <view class='tp' data-id='{{item.id}}' bindtap='checkProduct'>
+          <image mode='aspectFill' src='{{ip}}{{item.img}}'></image>
+        </view>
+        <view class='detail'>
+          <text class='name'>{{item.name}}</text>
+          <text class='num'>{{item.likes}}</text>
+          <text class='icon-1 icon'></text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

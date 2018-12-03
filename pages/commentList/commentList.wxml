@@ -1,0 +1,27 @@
+<!--pages/commentList/commentList.wxml-->
+<view class='container'>
+  <view class='commentlist'>
+    <view class='listcontent'>
+      <view class='commentHead'>
+        共{{commentlist.length}}条评论
+      </view>
+      <view class='commentitem' wx:for='{{commentlist}}' wx:key='{{item.id}}'>
+        <image class='commentuserpic' src='{{item.avatar}}'></image>
+        <view class='commentcontent'>
+          <view class='commentname'>{{item.userName}}</view>
+          <view class='commenttime'>{{item.createTime}}</view>
+          <view class='commenttext'>{{item.content}}</view>
+          <view class='commentPic'>
+            <image src='{{ip}}{{i}}' mode='aspectFill' wx:for='{{item.imgs}}' wx:for-item='i' wx:key='*this'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- <view class='commentbottom'>
+      <image class='userImg' src='{{userimg}}'></image>
+      <input class='commentvideo' type='text' bindinput='commenttext' cursor-spacing='50' value="{{comment}}" placeholder='写下你的评论……'></input>
+    </view> -->
+    <!--评论  -->
+
+  </view>
+</view>

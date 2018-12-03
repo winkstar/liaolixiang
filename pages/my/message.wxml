@@ -1,0 +1,15 @@
+<view class='container'>
+
+  <block wx:for='{{message}}' wx:key="this" wx:for-index="index">
+    <view class='box' catchtap='messDetail'>
+      <view class='left'>
+        <text></text>
+      </view>
+      <view class='right'>
+        <text class='messTitle'>{{item.title}}</text>
+        <text class='messCon'>{{item.con}}</text>
+      </view>
+    </view>
+  </block>
+
+</view>

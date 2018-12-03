@@ -1,0 +1,41 @@
+/* pages/search/searchList.wxss */
+.container{
+  background: #fff;
+}
+.topHead{
+  width: 100%;
+  line-height: 30px;
+  font-size: 14px;
+  text-align: center;
+}
+.resultList{
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+.listItem{
+  flex: 46%;
+  max-width: 46%;
+  margin: 10px 2%;
+}
+.listItem image{
+  width: 100%;
+  height: 100px;
+  display: block;
+}
+.listItem text{
+  display: block;
+  width: 100%;
+  text-align: left;
+  line-height: 20px;
+  font-size: 12px;
+}
+.nomore{
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+  margin-top: 10px;
+}

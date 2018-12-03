@@ -1,0 +1,58 @@
+.container>view {
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+  color: #000;
+  line-height: 40px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.container>view text {
+  width: 20%;
+}
+
+.container>view input {
+  width: 80%;
+  height: 40px;
+  padding-left: 40rpx;
+}
+
+.container>view picker {
+  width: 80%;
+  padding-left: 40rpx;
+}
+
+/*确认  */
+
+.confirm {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  height: 32px;
+  z-index: 5;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.confirm button{
+  width: 160px;
+  height: 32px;
+  font-size: 14px;
+  line-height: 32px;
+  border: 1px solid black;
+  background-color: #fff;
+}
+
+.container {
+  height: 100vh;
+  padding: 10px;
+  box-sizing: border-box;
+  display: block;
+}

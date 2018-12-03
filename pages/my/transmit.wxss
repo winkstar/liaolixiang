@@ -1,0 +1,102 @@
+@import 'stylesheet.wxss';
+.container{
+  height: 100vh;
+  background-color: #fff;
+}
+/* 搜索框 */
+.search-container {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  padding: 10px;
+  background-color:#fff;
+  box-sizing: border-box;
+}
+
+.search-input {
+  box-sizing: border-box;
+  width:100%;
+  height: 30px;
+  line-height: 30px;
+  min-height: 30px;
+  background:rgb(233,233,233);
+  border-radius: 5px;
+  font-size: 14px;
+  padding-left: 100rpx;
+  border: none;
+}
+
+.search-container image {
+  width: 50rpx;
+  height: 25px;
+  position: absolute;
+  top: 13px;
+  left: 50rpx;
+  z-index: 99;
+}
+
+.search-container icon{
+  position: absolute;
+  height: 20px;
+  top: 13px;
+  right:30rpx;
+  z-index: 99;
+}
+
+/* 收藏内容展示 */
+.content{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  justify-content: space-between;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.box{
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tp{
+  width: 100%;
+}
+
+.tp image{
+  width: 100%;
+  height: 100px;
+}
+
+.detail{
+  width: 100%;
+  font-size: 14px;
+  font-weight: 700;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-between; */
+}
+
+.name{
+  float: left;
+}
+
+.icon-1::after {
+  font-family: 'iconfont';
+  font-weight: 500;
+  font-style: normal;
+  content: '\e627';
+}
+
+.icon{
+  float: right;
+  margin-right: 5px;
+}
+
+.num{
+  float: right;
+}

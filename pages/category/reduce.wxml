@@ -1,0 +1,25 @@
+<view class="container">
+  <!--搜索框  -->
+  <view class='search-container'>
+    <input class='search-input' placeholder='减脂'  value="{{inputValue}}" bindinput="bindKeyInput"></input>
+    <image src='../image/search.png'></image>
+    <icon type='clear' hidden='{{flag}}' catchtap='shanchu'></icon>
+  </view>
+
+  <!-- 收藏内容展示 -->
+  <view class='content'>
+    <block wx:for="{{content}}" wx:key="this" wx:for-index='index'>
+      <view class='box'>
+        <view class='tp'>
+          <image mode='aspectFit' src='{{item.src}}'></image>
+        </view>
+
+        <view class='detail'>
+          <text class='name'>{{item.name}}</text>
+          <text class='num'>{{item.num}}</text>
+          <text class='icon-1 icon'></text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

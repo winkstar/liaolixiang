@@ -1,0 +1,12 @@
+<!--pages/my/card.wxml-->
+<view class='container'>
+  <view class='cardItem' wx:for='{{cardList}}' wx:key='*this'>
+    <image src='../image/5.jpg'></image>
+    <view class='{{item.canUse?"cardInfo":"cardInfo mask"}}'>
+      <text class='price'>￥ {{item.price}}.00</text>
+      <text class='condition'>满{{item.cond}}可用</text>
+      <image src='../image/guoqi.png' class='useless' wx:if='{{!item.canUse}}'></image>
+      <text class='cardTime'>有效期：{{item.time1}}至{{item.time2}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<!--pages/my/point.wxml-->
+<view class='container'>
+  <view class='pointBox'>
+    <view class='pointTop'>
+      <text>共</text>
+      <text class='point'>{{point}}分</text>
+    </view>
+    <view class='pointBottom'>
+      <text bindtap='showTips'>如何获取积分</text>
+      <view bindtap='pointDetail'>积分明细</view>
+    </view>
+  </view>
+  <view class='usePoint'>
+    <image mode='widthFix' src='../image/choujiang.png' bindtap='choujiang'></image>
+  </view>
+  <view class='pointTips' bindtap='hideTips' wx:if='{{showTips}}'>
+    <text class='textTitle'>积分获取说明</text>
+    <text class='tips'>1、购买食材并首次晒图评论可获得4分。</text>
+    <text class='tips'>2、每次转发小程序给好友可获得4分。</text>
+    <text class='tips'>3、发起拼团给好友并成功拼团可获得6分。</text>
+  </view>
+</view>

@@ -1,0 +1,149 @@
+.container{
+  height: 100vh;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.orderCon{
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.orderSingle {
+  font-size: 14px;
+  color: #505050;
+  background-color: #fff;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.orderState{
+  width: 100%;
+  padding: 10px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.orderNum{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.name{
+  margin-left: 5px;
+  font-size: 14px;
+  color: black;
+  font-weight: 700;
+}
+
+
+.orderNum image{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #383838;
+}
+
+.orderDetail{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+
+.left{
+  height: 40px;
+  line-height: 44px;
+}
+
+.right{
+  width: 180rpx;
+  height: 30px;
+  margin-top: 5px;
+}
+
+.right button{
+  height: 30px;
+  background-color: #fff;
+  color: #000;
+  /* font-weight: 700; */
+  line-height: 30px;
+  font-size: 12px;
+  padding: 0 20rpx;
+  border: 1px solid #000;
+}
+
+.orderGoods {
+   width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.orderGoods .goodsImg{
+  width: 80px;  
+  height: 80px;
+}
+
+.orderGoods .goodsImg image{
+  width: 80px;  
+  height: 80px;
+}
+
+.goodsDes{
+  width: 100%;
+  margin-left: 20rpx;
+}
+
+.goodsNum{
+  width: 100%;
+  margin-top: 30px;
+  color: #A6A6A6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tui{
+  background-color: #e5e5e5;
+  padding: 0 5px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.price{
+  color: black;
+}
+
+.content{
+  padding: 10px;
+  box-sizing: border-box;
+  color: #505050;
+  font-size: 14px;
+   border-bottom: 1px solid #f5f5f5;
+}
+.content .productPic{
+  width: 100%;
+  display: flex;
+}
+.productPic image{
+  flex: 30%;
+  max-width: 30%;
+  height: 100px;
+  margin: 5px 2%;
+}
+
+.state{
+  color: #808080;
+  font-size: 13px;
+}

@@ -1,0 +1,12 @@
+<!--pages/share/share.wxml-->
+<view class='container'>
+  <image class='wechatimg' src='../image/shareBack.jpg'></image>
+  <image class='sharepic' src='../image/pengyou.png'></image>
+  <image class='toPengyouquan' src='../image/pengyouquan.png' catchtap='toPengyouquan'></image>
+  <image class='back' src='../image/back.png' bindtap='backtovideo'></image> 
+  <button open-type='share' class='sharebtn' bindtap='zhuanfa'></button>
+  <view class='mask' bindtap='hideMask' wx:if='{{showMask}}'>
+    <image class='shareBigPic' mode='widthFix' src='../image/share.jpg' bindlongtap='save'></image>
+    <view class='shareText'>长按图片保存至手机即可分享到朋友圈</view>
+  </view>
+</view>
